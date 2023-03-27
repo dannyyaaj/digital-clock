@@ -1,46 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
 
-* {
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-background:url("clock_bg.jpg");
-background-repeat: no-repeat;
-background-size: cover;
+  background: url("clock_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
-background: rgb(95, 94, 95);
-width: 550px;
-margin: 100px auto;
-height: 175px;
-position: relative;
-padding: 25px;
+  background: rgb(95, 94, 95);
+  max-width: 550px;
+  margin: 4em 1em;
+  position: relative;
+  padding: 25px;
 }
 
 .badge {
-background: #e66357;
-color: white;
-padding: 5px 10px;
-font-family: sans-serif;
-font-weight: bold;
-width: 125px;
-position: absolute;
-top: -15px;
-left: 40%;
-text-align: center;
+  background: #e66357;
+  color: white;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-.clock{
-background: #ECEBEC;
-text-align: center;
-font-size: 55px;
-height: 100%;
-padding-top: 25px;
-font-family: Orbitron;
-border-radius: 4px;
-font-weight: bold;
+.clock {
+  background: #ecebec;
+  text-align: center;
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Orbitron;
+  border-radius: 0.1em;
+  font-weight: bold;
+  padding: 0.35em;
+}
+
+@media (min-width: 600px) {
+  .clock {
+    font-size: 3.5rem;
+  }
 }
