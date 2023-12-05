@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("clock_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  background: #8290ac;
+  max-width: 350px;
+  width: 100%;
+  margin: -20rem auto 0;
+  position: relative;
+  padding: 2em;
+}
+
+.badge {
+  background: #e66357;
+  color: white;
+  padding: 0.5em 0.75em;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  background: #fdfdfd;
+  text-align: center;
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Orbitron;
+  border-radius: 0.1em;
+  font-weight: bold;
+  padding: 0.35em;
+}
+
+.clock > span {
+  width: 100%;
+  color: #515f7a;
+}
+
+@media (min-width: 600px) {
+  .main {
+    max-width: 550px;
+  }
+  .clock {
+    font-size: 3.5rem;
+  }
+
+  .clock > span {
+    margin: 0.035em;
+  }
+}
